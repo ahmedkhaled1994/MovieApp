@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.ahmed.movieapp.DetailActivityFragment">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/detail_scroll">
+        <RelativeLayout
+            android:id="@+id/detail_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="185dp"
+                android:layout_height="278dp"
+                android:id="@+id/imageView_detail" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/favourite"
+                android:scaleType="fitXY"
+                android:layout_toRightOf="@+id/imageView_detail"
+                android:clickable="true"
+                android:id="@+id/detail_favourite"
+                android:layout_marginLeft="16dp" />
+            <TextView
+                android:id="@+id/overview_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView_detail"
+                android:text="Overview"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/detail_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/overview_header" />
+            <View
+                android:id="@+id/detail_separator1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/detail_overview"
+                android:layout_margin="2dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/detail_separator1"
+                android:id="@+id/detail_trailers_list">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trailers"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/abc_text_size_medium_material" />
+                <ImageView
+                    android:id="@+id/detail_trailers_loading"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/progress_animation"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/detail_separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/detail_trailers_list"
+                android:layout_margin="2dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/detail_separator"
+                android:id="@+id/detail_reviews_list">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reviews"
+                    android:id="@+id/detail_reviews_header"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/abc_text_size_medium_material" />
+                <ImageView
+                    android:id="@+id/detail_reviews_loading"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/progress_animation"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/detail_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_favourite"
+                android:layout_toRightOf="@+id/imageView_detail"
+                android:layout_margin="16dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/detail_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_rating"
+                android:layout_toRightOf="@+id/imageView_detail"
+                android:layout_margin="16dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

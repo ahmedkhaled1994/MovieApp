@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/movieApp_light</item>
+        <item name="colorPrimaryDark">@color/movieApp_dark</item>
+    </style>
+
+    <style name="MoviesListTheme" parent="AppTheme">
+        <item name="actionBarStyle">@style/ActionBar.Solid.MovieApp.NoTitle</item>
+    </style>
+
+    <style name="ActionBar.Solid.MovieApp.NoTitle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="logo">@drawable/ic_logo</item>
+    </style>
+
+</resources>
